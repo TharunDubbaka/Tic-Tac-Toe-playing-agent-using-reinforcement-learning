@@ -3,36 +3,19 @@ It is a normal reinforcement learning model which trains itself to play tic tac 
 
 
 
-# Requirements
-Python 3.x
-Libraries:
- - pygame
- - matplotlib
+# Tic Tac Toe AI with Real-Time Learning Visualization
 
-Install dependencies using:
+The project provides:
 
-# bash pip install pygame matplotlib
+- **Visual AI Training** – Watch the AI make moves on a Pygame board while learning.
+- **Real-Time Learning Curves** – TD error (Q-update magnitude) is plotted live using Matplotlib to show the agent’s learning progress.
+- **AI Self-Play Visualization** – After training, the AI can play against itself to demonstrate its learned strategy.
+- **Human vs AI Gameplay** – After AI training, the user can play against the trained AI.
 
-# How to Run
-1. Run the Python script:
-# bash python tic_tac_toe_ai.py
-2. Training Phase:
-  - The AI will play games against itself.
-  - pygame window shows board moves.
-  - Matplotlib window shows the TD error (loss) decreasing over episodes.
-3. AI Self-Play Phase:
-  - After training, the AI plays against itself.
-  - Pygame window shows moves and announces winner.
-4. Human Play Phase:
-  - Click on the Pygame board to place your move (O).
+### Key Concepts
 
-# Features
- - Real-time AI training visualization.
- - Real-time learning curve plotting with Matplotlib.
- - Self-play mode for AI.
- - Human vs AI gameplay after training.
+- **Q-Learning**: The agent maintains a Q-table that maps board states and actions to expected rewards.
+- **TD Error**: Measures how much the Q-value changes with each update; used for plotting the learning curve.
+- **Exploration vs Exploitation**: During training, the AI sometimes makes random moves (exploration) to discover better strategies.
+- **Epsilon Decay**: Exploration probability decreases over time, making the AI rely more on learned strategies.
 
-Adjustable parameters: learning rate (ALPHA), discount factor (GAMMA), epsilon decay.
-AI (X) responds automatically.
-
-Game ends with winner announcement.
