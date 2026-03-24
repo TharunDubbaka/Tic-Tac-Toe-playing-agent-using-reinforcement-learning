@@ -190,7 +190,7 @@ def play_with_human():
             pygame.time.delay(3000)
             running = False
 
-print("Training AI ")
+print("Training AI: ")
 train_visual(episodes=50000)
 print("Training completed")
 ai_self_play_visual()
